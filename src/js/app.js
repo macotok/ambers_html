@@ -7,7 +7,7 @@ window.onload = () => {
       const speed = 1000;
       const href = $(this).attr('href');
       const target = $(href === '#' || href === '' ? 'html' : href);
-      const position = target.offset().top;
+      const position = target.offset().top - $('.m-header-01').height();
       $('body, html').animate({
         scrollTop: position,
       }, speed, 'swing');

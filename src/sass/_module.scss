@@ -49,7 +49,7 @@
   padding: 85px 0;
   &-inner {
     position: relative;
-    height: 450px;
+    height: 500px;
   }
   &-text {
     position: absolute;
@@ -68,7 +68,48 @@
   &-img {
     position: absolute;
     z-index: 1;
-    bottom: 0;
+    bottom: 50px;
     left: 110px;
+  }
+}
+.m-block-02 {
+  &-title {
+    text-align: center;
+    margin-bottom: 10rem;
+  }
+  &-logo {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 2.5rem;
+  }
+  &-text-01 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  &-text-02 {
+    padding: 30px 160px 90px;
+  }
+}
+.m-list-01 {
+  display: flex;
+  flex-wrap: wrap;
+  &-item {
+    width: 33.3%;
+  }
+  &-thum {
+    width: 100%;
+  }
+}
+.m-bg-01 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  height: 450px;
+  &-img-01 {
+    background-image: url("../img/bg/01.jpg");
+  }
+  &-img-02 {
+    background-image: url("../img/bg/03.jpg");
   }
 }
