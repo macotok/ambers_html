@@ -1,2 +1,33 @@
+.m-contents-inner-01 {
+  width: 1080px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .m-header-01 {
+  position: fixed;
+  background-color: $white-color-01;
+  width: 100%;
+  &-logo {
+    position: absolute;
+    left: 40px;
+    top: 5px;
+  }
+}
+.m-nav-01 {
+  padding: 30px 0;
+  &-list {
+    display: flex;
+    justify-content: center;
+  }
+  &-item {
+    margin-right: 35px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &-link {
+    color: $black-color-01;
+    @include hoverLink();
+  }
 }
