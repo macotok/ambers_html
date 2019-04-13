@@ -3,11 +3,11 @@
   margin: 0 auto;
   position: relative;
 }
-
 .m-header-01 {
   position: fixed;
   background-color: $white-color-01;
   width: 100%;
+  z-index: z(header);
   &-logo {
     position: absolute;
     left: 40px;
@@ -29,5 +29,19 @@
   &-link {
     color: $black-color-01;
     @include hoverLink();
+  }
+}
+.m-visual-01 {
+  width: 100%;
+  border-bottom: 4px solid $key-color;
+  &-list {
+    max-height: 600px;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  &-img {
+    width: 100%;
   }
 }
