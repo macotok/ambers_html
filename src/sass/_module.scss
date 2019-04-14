@@ -87,7 +87,19 @@
     margin-bottom: 3rem;
   }
   &-text-02 {
-    padding: 30px 160px 90px;
+    padding: 3rem 160px 6rem;
+  }
+}
+.m-block-03 {
+  background-color: $bg-color-01;
+  padding-top: 1rem;
+  margin-bottom: 10rem;
+  &-inner {
+    border-top: 4px solid $key-color;
+  }
+  &-title {
+    text-align: center;
+    padding: 2rem 0 4rem;
   }
 }
 .m-list-01 {
@@ -98,6 +110,17 @@
   }
   &-thum {
     width: 100%;
+  }
+}
+.m-list-02 {
+  display: flex;
+  padding: 0 160px;
+  justify-content: space-between;
+  &-text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 .m-bg-01 {
@@ -112,4 +135,14 @@
   &-img-02 {
     background-image: url("../img/bg/03.jpg");
   }
+}
+.m-button-01 {
+  background-image: url("../img/bg/02.jpg");
+  background-position: center top;
+  background-repeat: repeat-x;
+  height: 140px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
