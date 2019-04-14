@@ -149,6 +149,18 @@
     font-size: 1.4rem;
   }
 }
+.m-block-05 {
+  margin-bottom: 12rem;
+  &-title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  &-inner {
+    display: flex;
+    padding: 0 40px;
+    justify-content: space-between;
+  }
+}
 .m-list-01 {
   display: flex;
   flex-wrap: wrap;
@@ -245,5 +257,29 @@
       font-size: 1.8rem;
       padding-left: 10px;
     }
+  }
+}
+.m-box-03 {
+  border: 1px solid $black-color-01;
+  width: 460px;
+  padding: 1rem 60px 2rem;
+  box-sizing: border-box;
+  &-text {
+    padding-top: 1rem;
+  }
+}
+.m-title-01 {
+  width: 260px;
+  margin: 0 auto;
+  text-align: center;
+  &-text-01 {
+    font-size: .8rem;
+    padding-bottom: .3rem;
+  }
+  &-text-02 {
+    padding-top: .3rem;
+    border-top: 1px solid $black-color-01;
+    font-size: 1.6rem;
+    font-weight: normal;
   }
 }
