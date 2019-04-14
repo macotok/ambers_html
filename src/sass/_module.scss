@@ -81,6 +81,9 @@
     margin: 0 auto;
     display: block;
     margin-bottom: 2.5rem;
+    &.is-center {
+      padding-right: 90px;
+    }
   }
   &-text-01 {
     text-align: center;
@@ -88,6 +91,10 @@
   }
   &-text-02 {
     padding: 3rem 160px 6rem;
+  }
+  &-text-03 {
+    text-align: center;
+    padding: 3rem 0 6rem;
   }
 }
 .m-block-03 {
@@ -135,6 +142,9 @@
   &-img-02 {
     background-image: url("../img/bg/03.jpg");
   }
+  &-img-03 {
+    background-image: url("../img/bg/05.jpg");
+  }
 }
 .m-button-01 {
   background-image: url("../img/bg/02.jpg");
@@ -145,4 +155,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.m-box-01 {
+  background-color: $bg-color-01;
+  padding-top: 1rem;
+  margin-bottom: 6rem;
+  &-inner {
+    border-top: 4px solid $key-color;
+    padding-top: 1rem;
+    .m-button-01 {
+    }
+  }
+}
+.m-box-02 {
+  background-image: url("../img/bg/04.jpg");
+  background-position: center top;
+  background-repeat: repeat-x;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+  &-text {
+    color: $white-color-01;
+    font-size: 1.2rem;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    span {
+      display: inline-block;
+      font-size: 1.8rem;
+      padding-left: 10px;
+    }
+  }
 }
