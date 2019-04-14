@@ -87,6 +87,10 @@ module.exports = [
             },
           ],
         },
+        {
+          test: /fancybox[\/\\]dist[\/\\]js[\/\\]jquery.fancybox.cjs.js/,
+          use: "imports-loader?jQuery=jquery,$=jquery,this=>window"
+        },
       ],
     },
     optimization: {
@@ -104,10 +108,6 @@ module.exports = [
         {
           from: path.resolve(__dirname, 'src/img/'),
           to: path.resolve(__dirname, 'dist/img/'),
-        },
-        {
-          from: path.resolve(__dirname, 'src/font/'),
-          to: path.resolve(__dirname, 'dist/font/'),
         },
       ]),
       new MiniCssExtractPlugin({

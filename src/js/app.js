@@ -1,5 +1,7 @@
 import $ from 'jquery';
+window.jQuery = $;
 import slick from 'slick-carousel';
+require("@fancyapps/fancybox");
 
 window.onload = () => {
   const pageLInk = () => {
@@ -22,6 +24,9 @@ window.onload = () => {
     pauseOnFocus: false,
     pauseOnHover: false,
     speed: 2000
+  });
+  $('.fn-fancybox').fancybox({
+    loop: true,
   });
   pageLInk();
 };
