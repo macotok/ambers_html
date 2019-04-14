@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -87,10 +88,6 @@ module.exports = [
             },
           ],
         },
-        {
-          test: /fancybox[\/\\]dist[\/\\]js[\/\\]jquery.fancybox.cjs.js/,
-          use: "imports-loader?jQuery=jquery,$=jquery,this=>window"
-        },
       ],
     },
     optimization: {
@@ -104,6 +101,11 @@ module.exports = [
     },
     devtool: 'source-map',
     plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+      }),
       new CopyWebpackPlugin([
         {
           from: path.resolve(__dirname, 'src/img/'),

@@ -1,5 +1,4 @@
 import $ from 'jquery';
-window.jQuery = $;
 import slick from 'slick-carousel';
 require("@fancyapps/fancybox");
 
