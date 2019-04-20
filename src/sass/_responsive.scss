@@ -34,9 +34,6 @@
     }
   }
   .m-block-02 {
-    &-title {
-      margin-bottom: 2rem;
-    }
     &-img {
       max-width: 100%;
     }
@@ -81,6 +78,9 @@
       }
     }
   }
+  .m-title-01 {
+    margin-bottom: 2rem;
+  }
   .m-list-02 {
     display: block;
     padding: 0;
@@ -93,6 +93,12 @@
 
 @media screen and (max-width: 767px) {
   .m-list-01 {
+    &-item {
+      width: 50%;
+    }
+  }
+  .m-list-03 {
+    flex-wrap: wrap;
     &-item {
       width: 50%;
     }

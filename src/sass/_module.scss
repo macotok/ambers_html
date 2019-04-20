@@ -73,21 +73,39 @@
   }
 }
 .m-block-02 {
-  &-title {
-    text-align: center;
-    margin-bottom: 10rem;
-  }
   &-logo {
     margin: 0 auto;
     display: block;
     margin-bottom: 2.5rem;
     &.is-center {
-      padding-right: 90px;
+      padding-right: 115px;
     }
   }
   &-text-01 {
     text-align: center;
     margin-bottom: 3rem;
+    &-title {
+      position: relative;
+      display: inline-block;
+      padding: 0 30px;
+      font-size: 1.2rem;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 20px;
+        height: 1px;
+        background-color: black;
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+      }
+    }
   }
   &-text-02 {
     text-align: center;
@@ -231,6 +249,15 @@
     padding: 1rem 0;
   }
 }
+.m-list-03 {
+  display: flex;
+  &-item {
+    width: 25%;
+  }
+  &-thum {
+    width: 100%;
+  }
+}
 .m-bg-01 {
   background-repeat: no-repeat;
   background-size: cover;
@@ -256,6 +283,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  &-link {
+    margin-right: 70px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 .m-button-02 {
   background-image: url("../img/bg/02.jpg");
@@ -280,8 +313,6 @@
   &-inner {
     border-top: 4px solid $key-color;
     padding-top: .5rem;
-    .m-button-01 {
-    }
   }
 }
 .m-box-02 {
@@ -324,6 +355,10 @@
   height: 100%;
 }
 .m-title-01 {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+.m-title-03 {
   width: 260px;
   margin: 0 auto;
   text-align: center;

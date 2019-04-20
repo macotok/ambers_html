@@ -2,6 +2,7 @@ import $ from 'jquery';
 import slick from 'slick-carousel';
 require("@fancyapps/fancybox");
 import googleMap from './googleMap';
+import smartRollover from './smartRollover';
 
 window.onload = () => {
   const pageLInk = () => {
@@ -31,4 +32,9 @@ window.onload = () => {
   pageLInk();
 };
 google.maps.event.addDomListener(window, 'load', googleMap);
-
+if (window.addEventListener) {
+  window.addEventListener('load', smartRollover, false);
+}
+else if (window.attachEvent) {
+  window.attachEvent('onload', smartRollover);
+}
