@@ -1,11 +1,14 @@
 @media screen and (max-width: 1080px) {
+  .is-pc {
+    display: none;
+  }
+  .is-sp {
+    display: block;
+  }
   .m-contents-inner-01 {
     width: 100%;
     padding: 0 1.5rem !important;
     box-sizing: border-box;
-  }
-  .m-nav-01-list {
-    display: none;
   }
   .m-block-01 {
     padding: 3rem 0 0;
