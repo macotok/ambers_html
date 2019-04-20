@@ -20,7 +20,10 @@
      font-size: 1rem;
      span {
        margin-left: 0;
-       display: inline-block;
+       display: block;
+       &.is-sp {
+         margin-top: 1rem;
+       }
      }
     }
     &-box {
@@ -39,8 +42,10 @@
     }
     &-text-02 {
       padding: 3rem 0;
+      text-align: left;
     }
     &-text-03 {
+      padding: 3rem 0;
       text-align: left;
     }
   }
@@ -79,7 +84,18 @@
     }
   }
   .m-title-01 {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    &-img {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  .m-title-02 {
+    margin-bottom: 1rem;
+    &-img {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
   }
   .m-list-02 {
     display: block;
@@ -105,5 +121,33 @@
   }
   .m-box-03 {
     width: 100%;
+  }
+  .m-button-01 {
+    display: block;
+    text-align: center;
+    padding: 2rem 0;
+    &-link {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 479px) {
+  .m-box-02 {
+    flex-wrap: wrap;
+    &-icon {
+      width: 20px;
+    }
+    &-text-01 {
+      padding-left: 10px;
+    }
+    &-text-02 {
+      padding-left: 0;
+      width: 100%;
+      text-align: center;
+    }
   }
 }

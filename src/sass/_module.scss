@@ -280,13 +280,14 @@
   background-image: url("../img/bg/02.jpg");
   background-position: left top;
   background-repeat: repeat-x;
-  height: 140px;
   width: 100%;
+  padding: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   &-link {
     margin-right: 70px;
+    display: block;
     &:last-child {
       margin-right: 0;
     }
@@ -296,9 +297,8 @@
   background-image: url("../img/bg/02.jpg");
   background-position: left top;
   background-repeat: repeat-x;
-  height: 140px;
   width: 100%;
-  padding-top: .5rem;
+  padding: .5rem 0 1rem;
   box-sizing: border-box;
   &-inner {
     border-top: 4px solid $key-color;
@@ -306,6 +306,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    padding-top: 1rem;
   }
 }
 .m-box-01 {
@@ -321,24 +322,23 @@
   background-image: url("../img/bg/04.jpg");
   background-position: center top;
   background-repeat: repeat-x;
-  height: 80px;
   width: 100%;
+  padding: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 6rem;
-  &-text {
+  &-text-01 {
     color: $white-color-01;
     font-size: 1.2rem;
     padding-left: 20px;
-    display: flex;
-    align-items: center;
     line-height: 1;
-    span {
-      display: inline-block;
-      font-size: 1.8rem;
-      padding-left: 10px;
-    }
+  }
+  &-text-02 {
+    color: $white-color-01;
+    display: inline-block;
+    font-size: 1.8rem;
+    padding-left: 10px;
   }
 }
 .m-box-03 {
@@ -412,15 +412,15 @@
   }
 }
 .m-footer-01 {
-  background-image: url("../img/bg/06.jpg");
+  background-image: url("../img/bg/02.jpg");
   background-repeat: repeat-x;
   background-position: left top;
-  height: 200px;
   width: 100%;
   &-inner {
     display: flex;
     justify-content: space-between;
-    padding: 30px 110px 0;
+    padding: 1rem 110px;
+    font-size: .9rem;
   }
   &-text-02 {
     font-size: .8rem;
