@@ -15,7 +15,7 @@
   }
 }
 .m-nav-01 {
-  padding: 30px 0;
+  padding: 1.5rem 0;
   &-list {
     display: flex;
     justify-content: center;
@@ -75,13 +75,15 @@
   }
 }
 .m-block-02 {
-  &-logo {
-    margin: 0 auto;
+  &-logo-01 {
+    margin: 0 auto 2.5rem;
     display: block;
-    margin-bottom: 2.5rem;
-    &.is-center {
-      padding-right: 115px;
-    }
+  }
+  &-logo-02 {
+    display: block;
+    position: relative;
+    left: 50%;
+    margin: 0 0 2.5rem -176px;
   }
   &-text-01 {
     text-align: center;
@@ -224,7 +226,7 @@
     display: inline-block;
     margin-bottom: 2rem;
   }
-  &-inner-02 {
+  &-inner-03 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10rem;

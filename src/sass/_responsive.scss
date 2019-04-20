@@ -8,32 +8,14 @@
     display: none;
   }
   .m-block-01 {
-    padding: 3rem 0 3rem;
-    &-inner {
-      height: auto;
-    }
+    padding: 3rem 0 0;
     &-text {
-     -webkit-writing-mode: initial;;
-     -ms-writing-mode: initial;;
-     writing-mode: initial;;
-     position: static;
-     font-size: 1rem;
-     span {
-       margin-left: 0;
-       display: block;
-       &.is-sp {
-         margin-top: 1rem;
-       }
-     }
-    }
-    &-box {
-      margin-top: 1rem;
-      text-align: right;
+      top: 0;
+      right: 2rem;
     }
     &-img {
-      position: static;
-      width: 200px;
-      display: inline-block;
+      left: 2rem;
+      bottom: 3rem;
     }
   }
   .m-block-02 {
@@ -52,7 +34,7 @@
   .m-block-04 {
     &-box {
       display: block;
-      padding: 3rem 0;
+      padding: 3rem 0 6rem;
     }
     &-inner-01 {
       margin-bottom: 1rem;
@@ -62,7 +44,7 @@
     }
   }
   .m-block-05 {
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
     &-inner {
       display: block;
       padding: 0;
@@ -71,16 +53,30 @@
   .m-block-06 {
     &-inner-01 {
       display: block;
+      text-align: center;
     }
     &-text-01 {
       -webkit-writing-mode: initial;;
       -ms-writing-mode: initial;;
       writing-mode: initial;;
       font-size: 1rem;
+      margin-right: 0;
+      text-align: left;
       span {
         margin-left: 0;
         display: inline-block;
       }
+    }
+    &-text-02 {
+      font-size: 1.2rem;
+    }
+    &-text-03 {
+      text-align: right;
+      display: block !important;
+      margin-top: 3rem;
+    }
+    &-inner-02 {
+      text-align: center;
     }
   }
   .m-title-01 {
@@ -90,12 +86,14 @@
     }
   }
   .m-title-02 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     &-img {
-      max-width: 100%;
-      padding: 0 7rem;
+      max-width: 60%;
       box-sizing: border-box;
     }
+  }
+  .m-title-03 {
+    width: 200px;
   }
   .m-list-02 {
     display: block;
@@ -105,9 +103,61 @@
   .m-box-03 {
     margin: 0 auto 2rem;
   }
+  .m-footer-01 {
+    &-inner {
+      padding: 1rem 0;
+      font-size: .7rem;
+    }
+    &-text-01 {
+      span {
+        display: inline-block;
+      }
+    }
+    &-text-02 {
+      font-size: .6rem;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .m-block-01 {
+    padding: 3rem 0;
+    &-inner {
+      height: auto;
+    }
+    &-text {
+      -webkit-writing-mode: initial;;
+      -ms-writing-mode: initial;;
+      writing-mode: initial;;
+      position: static;
+      font-size: 1rem;
+      span {
+        margin-left: 0;
+        display: block;
+        &.is-sp {
+          margin-top: 1rem;
+        }
+      }
+    }
+    &-box {
+      margin-top: 1rem;
+      text-align: right;
+    }
+    &-img {
+      position: static;
+      width: 200px;
+      display: inline-block;
+    }
+  }
+  .m-block-06 {
+    &-inner-03 {
+      display: block;
+      margin-bottom: 6rem;
+    }
+    &-text-04 {
+      margin-bottom: 2rem;
+    }
+  }
   .m-list-01 {
     &-item {
       width: 50%;
@@ -141,6 +191,9 @@
       padding-top: 2rem;
     }
   }
+  .m-contact-01 {
+    margin-bottom: 6rem;
+  }
 }
 @media screen and (max-width: 479px) {
   .m-block-04 {
@@ -165,6 +218,11 @@
       padding-left: 0;
       width: 100%;
       text-align: center;
+    }
+  }
+  .m-title-03 {
+    &-text-02 {
+      font-size: 1.4rem;
     }
   }
 }
