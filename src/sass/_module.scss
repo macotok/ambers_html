@@ -19,6 +19,7 @@
   &-list {
     display: flex;
     justify-content: center;
+    padding-left: 60px;
   }
   &-item {
     margin-right: 35px;
@@ -28,6 +29,7 @@
   }
   &-link {
     color: $black-color-01;
+    font-size: .9rem;
     @include hoverLink();
   }
 }
@@ -263,7 +265,7 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
-  height: 450px;
+  height: 900px;
   &-img-01 {
     background-image: url("../img/bg/01.jpg");
   }
@@ -357,6 +359,10 @@
 .m-title-01 {
   text-align: center;
   margin-bottom: 10rem;
+}
+.m-title-02 {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 .m-title-03 {
   width: 260px;
