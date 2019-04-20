@@ -87,13 +87,13 @@
     margin-bottom: 4rem;
     &-img {
       max-width: 100%;
-      box-sizing: border-box;
     }
   }
   .m-title-02 {
     margin-bottom: 1rem;
     &-img {
       max-width: 100%;
+      padding: 0 7rem;
       box-sizing: border-box;
     }
   }
@@ -121,6 +121,7 @@
   }
   .m-box-03 {
     width: 100%;
+    padding: 1rem 1rem 2rem;
   }
   .m-button-01 {
     display: block;
@@ -134,8 +135,24 @@
       }
     }
   }
+  .m-button-02 {
+    padding-bottom: 2rem;
+    &-inner {
+      padding-top: 2rem;
+    }
+  }
 }
 @media screen and (max-width: 479px) {
+  .m-block-04 {
+    &-table {
+      td {
+        display: block;
+      }
+    }
+  }
+  .m-box-01 {
+    margin-bottom: 2rem;
+  }
   .m-box-02 {
     flex-wrap: wrap;
     &-icon {
