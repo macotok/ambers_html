@@ -86,14 +86,14 @@
   z-index: z(drawer);
   &-cancel {
     position: absolute;
-    top: 44px;
+    top: 20px;
     right: 1.5rem;
     z-index: 1;
   }
   &-icon {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
     position: relative;
   }
   &-text {
@@ -104,7 +104,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 95%;
+      width: 100%;
       height: 5%;
       margin: -8% 0 0 -42%;
       background: $black-color-01;

@@ -10,6 +10,11 @@
     padding: 0 1.5rem !important;
     box-sizing: border-box;
   }
+  .m-header-01 {
+    &-logo {
+      width: 110px;
+    }
+  }
   .m-block-01 {
     padding: 3rem 0 0;
     &-text {

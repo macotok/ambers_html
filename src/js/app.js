@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import slick from 'slick-carousel';
 require("@fancyapps/fancybox");
+import drawer from './drawer';
 import googleMap from './googleMap';
 import smartRollover from './smartRollover';
 
@@ -30,6 +31,7 @@ window.onload = () => {
     loop: true,
   });
   pageLInk();
+  drawer();
 };
 google.maps.event.addDomListener(window, 'load', googleMap);
 if (window.addEventListener) {
