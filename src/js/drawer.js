@@ -8,4 +8,5 @@ export default function drawer() {
     $drawerMenu.removeClass('is-show');
     $drawerMenu.addClass('is-hide');
   });
+  $('.test').addClass('add')
 }
