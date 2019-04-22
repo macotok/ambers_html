@@ -8,7 +8,7 @@ export default class ElementAnimation {
     this.scrollEventFlag = true;
     this.observeTime = 200;
     this.controlPosition = 500;
-    this.delaySpeed = 150;
+    this.delaySpeed = 200;
   }
   getPositionToBlock() {
     for (let i = 0; i < this.$targetBlock.length; i += 1) {
