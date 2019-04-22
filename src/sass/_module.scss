@@ -45,6 +45,9 @@
     position: relative;
     height: 30px;
     width: 30px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &-border {
     position: absolute;
@@ -95,6 +98,9 @@
     width: 34px;
     height: 34px;
     position: relative;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &-text {
     &::before,

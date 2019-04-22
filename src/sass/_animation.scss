@@ -11,6 +11,16 @@
     animation-timing-function: ease-out;
   }
 }
+.fn-drawerAnimation {
+  opacity: 0;
+  &.active {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+  }
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;

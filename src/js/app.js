@@ -1,5 +1,5 @@
 import ElementAnimation from './ElementAnimation';
-import drawer from './drawer';
+import Drawer from './Drawer';
 import funcyboxFunc from './fancybox';
 import googleMap from './googleMap';
 import pageLink from './pageLink';
@@ -7,9 +7,10 @@ import slickFunc from './slick';
 import smartRollover from './smartRollover';
 
 window.onload = () => {
+  const drawer = new Drawer();
+  drawer.openDrawer();
   const elementAnimation = new ElementAnimation();
   elementAnimation.getPositionToBlock();
-  drawer();
   funcyboxFunc();
   pageLink();
   slickFunc();
