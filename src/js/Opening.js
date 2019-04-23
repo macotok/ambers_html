@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import slick from 'slick-carousel';
+
 export default class Opening {
   constructor() {
     this.$targetElement = $('.m-opening-01');
@@ -10,10 +13,11 @@ export default class Opening {
 
     setTimeout(() => {
       this.$targetElement.addClass('fadeOut');
-    }, 3000);
+    }, 3500);
 
     setTimeout(() => {
       this.$targetElement.remove();
-    }, 3500);
+      $('.fn-slider').slick('slickPlay')
+    }, 4500);
   }
 }

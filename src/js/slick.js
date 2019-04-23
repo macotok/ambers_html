@@ -11,4 +11,5 @@ export default function slickFunc() {
     pauseOnHover: false,
     speed: 2000
   });
+  $('.fn-slider').slick('slickPause');
 }
