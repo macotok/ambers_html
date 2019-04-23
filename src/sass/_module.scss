@@ -529,6 +529,71 @@
     height: 100%;
   }
 }
+.m-opening-01 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: $white-color-01;
+  width: 100%;
+  height: 100%;
+  &.fadeOut {
+    animation: fadeOut .5s ease 0s 1 both;
+  }
+  .fn-opening-animation-01 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .fn-opening-animation-02 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: $white-color-01;
+    animation: fadeIn .5s ease 2.5s 1 both;
+  }
+  &-inner {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    animation: logoFadeIn .5s ease .8s 1 both;
+  }
+  &-img-01 {
+    opacity: 0;
+    background-image: url("../img/opening/02.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    animation: fadeIn .5s ease 1s 1 both;
+  }
+  &-img-02 {
+    opacity: 0;
+    background-image: url("../img/opening/01.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    animation: fadeIn .5s ease 1.15s 1 both;
+  }
+}
 #googleMap {
   width: 100%;
   height: 450px;

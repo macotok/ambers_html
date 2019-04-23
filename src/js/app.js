@@ -2,6 +2,7 @@ import ElementAnimation from './ElementAnimation';
 import Drawer from './Drawer';
 import funcyboxFunc from './fancybox';
 import googleMap from './googleMap';
+import Opening from './Opening';
 import pageLink from './pageLink';
 import slickFunc from './slick';
 import smartRollover from './smartRollover';
@@ -12,6 +13,8 @@ window.onload = () => {
   const elementAnimation = new ElementAnimation();
   elementAnimation.getPositionToBlock();
   funcyboxFunc();
+  const opening = new Opening();
+  opening.event();
   pageLink();
   slickFunc();
 };

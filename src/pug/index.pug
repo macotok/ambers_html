@@ -5,12 +5,14 @@ html(lang="ja")
         title タイトル
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho")
         link(rel="stylesheet", href="css/style.css")
-    body#wrapper
-        include _include/header
-        .l-main-01
-            include _include/visual
-            include _include/main
-            include _include/footer
-        include _include/spMenu
+    body
+        #wrapper.l-wrapper-01
+            include _include/header
+            .l-main-01
+                include _include/visual
+                include _include/main
+                include _include/footer
+            include _include/spMenu
+        include _include/opening
         script(src="https://maps.google.com/maps/api/js?key=AIzaSyCDH1SnCeRcIOgf1pPyqbaoVH1isMsQs_4")
         script(src="js/app.js", type="text/javascript")
