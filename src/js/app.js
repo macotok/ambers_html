@@ -2,6 +2,7 @@ import ElementAnimation from './ElementAnimation';
 import Drawer from './Drawer';
 import funcyboxFunc from './fancybox';
 import googleMap from './googleMap';
+import judgeDevice from './judgeDevice';
 import Opening from './Opening';
 import pageLink from './pageLink';
 import slickFunc from './slick';
@@ -15,6 +16,7 @@ window.onload = () => {
   funcyboxFunc();
   const opening = new Opening();
   opening.event();
+  judgeDevice();
   pageLink();
   slickFunc();
 };

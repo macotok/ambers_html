@@ -44,7 +44,7 @@
     opacity: 0;
     z-index: 1;
     background: $key-color;
-    transition: 1s cubic-bezier(0.75, 0, 0.175, 1) .51s;
+    transition: .9s cubic-bezier(0.75, 0, 0.175, 1) .6s;
     transform: scale3d(1, 1, 1);
     transform-origin: left top;
     animation: fadeIn 1.8s ease 1s 1 both;
@@ -95,6 +95,45 @@
     }
     &:after {
       transform: translateY(0);
+    }
+  }
+}
+
+@mixin imgHoverAnimation {
+  &::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all linear .3s;
+    z-index: 1;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    transition: all linear .3s;
+    border-top: solid 3px $white-color-01;
+    border-right: solid 3px $white-color-01;
+    transform: rotate(45deg) translate(-8px,8px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    margin: -8px 0 0 -8px;
+    opacity: 0;
+  }
+  &:hover {
+    &::after {
+      background-color: rgba(0, 0, 0, .5);
+    }
+    &::before {
+      transform: rotate(45deg) translate(0,0);
+      opacity: 1;
     }
   }
 }

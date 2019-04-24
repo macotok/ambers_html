@@ -321,6 +321,12 @@
     text-align: right;
     margin-left: 0 !important;
   }
+  &-text-04,
+  &-text-05 {
+    .fn-animation {
+      display: inline-block;
+    }
+  }
   .m-box-04 {
     display: inline-block;
     margin-bottom: 2rem;
@@ -346,6 +352,9 @@
   &-thum {
     width: 100%;
   }
+  &-link {
+    @include imgHoverAnimation()
+  }
 }
 .m-list-02 {
   display: flex;
@@ -366,6 +375,9 @@
   &-thum {
     width: 100%;
   }
+  &-link {
+    @include imgHoverAnimation()
+  }
 }
 .m-bg-01 {
   background-repeat: no-repeat;
@@ -373,6 +385,11 @@
   background-attachment: fixed;
   background-position: center center;
   height: 900px;
+  body.is-sp &,
+  body.is-tablet & {
+    background-attachment: scroll;
+    height: 480px;
+  }
   &-img-01 {
     background-image: url("../img/bg/01.jpg");
   }
@@ -513,6 +530,7 @@
     padding: 15px 40px;
     font-size: 1rem;
     margin: 0 auto;
+    background-color: $white-color-01;
     &:hover {
       cursor: pointer;
     }
