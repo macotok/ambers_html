@@ -5,8 +5,10 @@ export default class Opening {
   constructor() {
     this.$targetElement = $('.m-opening-01');
     this.$animeElement01 = $('.fn-opening-animation-01');
+    this.$body = $('body');
   }
   event() {
+    this.$body.addClass('noScroll');
     setTimeout(() => {
       this.$targetElement.find(this.$animeElement01).addClass('active');
     }, 500);
@@ -17,7 +19,8 @@ export default class Opening {
 
     setTimeout(() => {
       this.$targetElement.remove();
-      $('.fn-slider').slick('slickPlay')
+      $('.fn-slider').slick('slickPlay');
+      this.$body.removeClass('noScroll');
     }, 4500);
   }
 }

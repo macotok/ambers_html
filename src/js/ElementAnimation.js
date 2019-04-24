@@ -4,8 +4,8 @@ export default class ElementAnimation {
   constructor() {
     this.$targetElement = $('.fn-animation');
     this.$targetBlock = $('.fn-animation-block');
+    this.$targetHeader = $('.fn-header');
     this.targetBlockPosition = [];
-    this.scrollEventFlag = true;
     this.observeTime = 200;
     this.controlPosition = 500;
     this.delaySpeed = 200;
@@ -19,14 +19,9 @@ export default class ElementAnimation {
   }
   eventScroll() {
     window.addEventListener('scroll', () => {
-      if (this.scrollEventFlag) {
-        this.scrollEventFlag = false;
-        setTimeout(() => {
-          const scrollTopPosition = $(window).scrollTop();
-          this.checkIsAnimation(scrollTopPosition);
-          this.scrollEventFlag = true;
-        }, this.observeTime);
-      }
+      const scrollTopPosition = $(window).scrollTop();
+      this.checkIsAnimation(scrollTopPosition);
+      this.headerAnimation(scrollTopPosition);
     }, false);
   };
   checkIsAnimation(scrollTopPosition) {
@@ -44,6 +39,11 @@ export default class ElementAnimation {
       targetBlock.find(this.$targetElement).eq(i).delay(i * this.delaySpeed).queue(function(){
         $(this).addClass('active').dequeue();
       });
+    }
+  }
+  headerAnimation(scrollTopPosition) {
+    if (0 < scrollTopPosition) {
+      this.$targetHeader.addClass('active');
     }
   }
   resizeWindow() {
