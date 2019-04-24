@@ -7,7 +7,7 @@ export default class ElementAnimation {
     this.$targetHeader = $('.fn-header');
     this.targetBlockPosition = [];
     this.observeTime = 200;
-    this.controlPosition = 500;
+    this.controlPosition = 700;
     this.delaySpeed = 200;
   }
   getPositionToBlock() {

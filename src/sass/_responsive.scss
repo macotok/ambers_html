@@ -11,8 +11,10 @@
     box-sizing: border-box;
   }
   .m-header-01 {
+    height: 50px;
     &-logo {
-      width: 110px;
+      top: 0;
+      width: 130px;
     }
   }
   .m-block-01 {
@@ -204,6 +206,22 @@
   }
 }
 @media screen and (max-width: 479px) {
+  .is-pc-slider {
+    display: none;
+  }
+  .is-sp-slider {
+    display: block;
+  }
+  .m-header-01 {
+    &-logo {
+      width: 110px;
+    }
+  }
+  .m-nav-03 {
+    &-link {
+      font-size: 1rem;
+    }
+  }
   .m-block-04 {
     &-table {
       td {
