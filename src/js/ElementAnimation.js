@@ -5,6 +5,7 @@ export default class ElementAnimation {
     this.$targetElement = $('.fn-animation');
     this.$targetBlock = $('.fn-animation-block');
     this.$targetHeader = $('.fn-header');
+    this.$arrowIcon = $('.fn-arrowIcon');
     this.targetBlockPosition = [];
     this.observeTime = 200;
     this.controlPosition = 700;
@@ -44,6 +45,7 @@ export default class ElementAnimation {
   headerAnimation(scrollTopPosition) {
     if (0 < scrollTopPosition) {
       this.$targetHeader.addClass('active');
+      this.$arrowIcon.addClass('fadeOut')
     }
   }
   resizeWindow() {

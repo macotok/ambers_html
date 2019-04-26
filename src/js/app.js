@@ -1,9 +1,8 @@
-import ElementAnimation from './ElementAnimation';
 import Drawer from './Drawer';
 import funcyboxFunc from './fancybox';
+import ImageLoading from './ImageLoading';
 import googleMap from './googleMap';
 import judgeDevice from './judgeDevice';
-import Opening from './Opening';
 import pageLink from './pageLink';
 import slickFunc from './slick';
 import smartRollover from './smartRollover';
@@ -11,11 +10,9 @@ import smartRollover from './smartRollover';
 window.onload = () => {
   const drawer = new Drawer();
   drawer.openDrawer();
-  const elementAnimation = new ElementAnimation();
-  elementAnimation.getPositionToBlock();
   funcyboxFunc();
-  const opening = new Opening();
-  opening.event();
+  const imageLoading = new ImageLoading();
+  imageLoading.loadProgress();
   judgeDevice();
   pageLink();
   slickFunc();

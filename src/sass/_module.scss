@@ -132,7 +132,6 @@
   width: 100%;
   border-bottom: 4px solid $key-color;
   &-list {
-    max-height: 600px;
     height: auto;
     overflow: hidden;
     display: flex;
@@ -144,6 +143,7 @@
   }
   &-img {
     width: 100%;
+    background-size: cover;
   }
 }
 .m-block-01 {
@@ -385,8 +385,8 @@
   background-attachment: fixed;
   background-position: center center;
   height: 900px;
-  body.is-sp &,
-  body.is-tablet & {
+  body.is-spDevice &,
+  body.is-tabletDevice & {
     background-attachment: scroll;
     height: 480px;
   }
@@ -619,6 +619,48 @@
     left: 0;
     z-index: 3;
     animation: fadeIn .5s ease 1.15s 1 both;
+  }
+}
+.m-icon-01 {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  border: 1px solid $white-color-01;
+  background-color: rgba(0, 0, 0, .5);
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -40px;
+  &.fadeOut {
+    animation: fadeOut .3s linear 0s 1 both;
+  }
+  &-box {
+    transform: translate(0, -17px);
+    padding-top: 20px;
+    color: $white-color-01;
+  }
+  &-arrow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    border-left: 1px solid $white-color-01;
+    border-bottom: 1px solid $white-color-01;
+    transform: rotate(-45deg);
+    animation: arrow 1.5s infinite;
+    box-sizing: border-box;
+  }
+  &-text {
+    display: inline-block;
+    position: relative;
+    bottom: -30px;
+    font-size: .8rem;
   }
 }
 #googleMap {

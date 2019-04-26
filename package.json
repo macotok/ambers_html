@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "imagesloaded": "^4.1.4",
     "jquery": "^3.3.1",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6",

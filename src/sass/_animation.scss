@@ -60,3 +60,17 @@
     opacity: 0;
   }
 }
+@keyframes arrow {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-15px, 15px);
+    opacity: 0;
+  }
+}
+
