@@ -130,20 +130,17 @@
 }
 .m-visual-01 {
   width: 100%;
-  border-bottom: 4px solid $key-color;
   &-list {
     height: auto;
     overflow: hidden;
-    display: flex;
-    align-items: center;
     opacity: 0;
+    border-bottom: 4px solid $key-color;
     &.slick-initialized {
       animation: fadeIn .5s ease 0s 1 both;
     }
   }
   &-img {
     width: 100%;
-    background-size: cover;
   }
 }
 .m-block-01 {
@@ -573,14 +570,6 @@
     height: 100%;
     z-index: 1;
   }
-  .fn-opening-animation-02 {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    background-color: $white-color-01;
-    animation: fadeIn 1s ease 2.5s 1 both;
-  }
   &-inner {
     opacity: 0;
     display: flex;
@@ -590,7 +579,7 @@
     width: 100%;
     height: 100%;
     z-index: 4;
-    animation: logoFadeIn .5s ease .8s 1 both;
+    animation: logoFadeIn .5s ease 0s 1 both;
   }
   &-img-01 {
     opacity: 0;
@@ -604,7 +593,9 @@
     top: 0;
     left: 0;
     z-index: 2;
-    animation: fadeIn .5s ease 1s 1 both;
+    &.fadeIn {
+      animation: fadeIn .5s ease 1s 1 both;
+    }
   }
   &-img-02 {
     opacity: 0;
@@ -618,7 +609,9 @@
     top: 0;
     left: 0;
     z-index: 3;
-    animation: fadeIn .5s ease 1.15s 1 both;
+    &.fadeIn {
+      animation: fadeIn .5s ease 1.15s 1 both;
+    }
   }
 }
 .m-icon-01 {

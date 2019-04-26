@@ -2,7 +2,8 @@
   @include animationBlock();
 }
 .fn-opening-animation-01 {
-  @include openingAnimationBlock();
+  @include animationBlock();
+  height: 100%;
 }
 .fn-animation {
   opacity: 0;

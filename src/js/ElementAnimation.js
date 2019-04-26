@@ -8,7 +8,7 @@ export default class ElementAnimation {
     this.$arrowIcon = $('.fn-arrowIcon');
     this.targetBlockPosition = [];
     this.observeTime = 200;
-    this.controlPosition = 700;
+    this.controlPosition = 800;
     this.delaySpeed = 200;
   }
   getPositionToBlock() {
