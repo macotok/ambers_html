@@ -7,31 +7,40 @@ export default class Opening {
     this.$openingElement01 = $('.fn-opening-animation-01');
     this.$openingImage01 = $('.fn-opening-img-01');
     this.$openingImage02 = $('.fn-opening-img-02');
+    this.$openingLoader = $('.fn-opening-loader');
+    this.$openingLogo = $('.fn-opening-logo');
     this.$slick = $('.fn-slider');
     this.$body = $('body');
     this.fadeIn = 'fadeIn';
+    this.fadeOut = 'fadeOut';
   }
   event() {
     this.$body.addClass('noScroll');
+    this.$targetElement.find(this.$openingLoader).addClass(this.fadeOut);
+
+    setTimeout(() => {
+      this.$targetElement.find(this.$openingLogo).addClass(this.fadeIn);
+    }, 1000);
+
     setTimeout(() => {
       this.$targetElement.find(this.$openingElement01).addClass('active');
-    }, 500);
+    }, 1500);
 
     setTimeout(() => {
       this.$targetElement.find(this.$openingImage01).addClass(this.fadeIn);
       this.$targetElement.find(this.$openingImage02).addClass(this.fadeIn);
-    }, 600);
+    }, 1600);
 
     setTimeout(() => {
       this.$slick.css('max-height', $(window).outerHeight());
       this.$targetElement.addClass('fadeOut');
       $('body,html').animate({ scrollTop: 0 }, 0);
-    }, 3000);
+    }, 4000);
 
     setTimeout(() => {
       this.$targetElement.remove();
       this.$slick.slick('slickPlay');
       this.$body.removeClass('noScroll');
-    }, 4000);
+    }, 5000);
   }
 }

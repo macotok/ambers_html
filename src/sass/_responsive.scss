@@ -222,6 +222,15 @@
       font-size: 1rem;
     }
   }
+  .m-block-02 {
+    &-logo-01 {
+      width: 130px;
+    }
+    &-logo-02 {
+      width: 200px;
+      margin-left: -140px;
+    }
+  }
   .m-block-04 {
     &-table {
       td {
@@ -241,9 +250,11 @@
       padding-left: 10px;
     }
     &-text-02 {
+      padding-top: .5rem;
       padding-left: 0;
       width: 100%;
       text-align: center;
+      line-height: 1;
     }
   }
   .m-title-03 {

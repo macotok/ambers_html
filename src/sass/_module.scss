@@ -570,7 +570,7 @@
     height: 100%;
     z-index: 1;
   }
-  &-inner {
+  &-inner-01 {
     opacity: 0;
     display: flex;
     justify-content: center;
@@ -579,7 +579,24 @@
     width: 100%;
     height: 100%;
     z-index: 4;
-    animation: logoFadeIn .5s ease 0s 1 both;
+    &.fadeIn {
+      animation: logoFadeIn .5s ease 0s 1 both;
+    }
+  }
+  &-inner-02 {
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    &.fadeOut {
+      animation: fadeOut .3s ease 0s 1 both;
+    }
   }
   &-img-01 {
     opacity: 0;
@@ -612,6 +629,26 @@
     &.fadeIn {
       animation: fadeIn .5s ease 1.15s 1 both;
     }
+  }
+}
+.m-loader-01 {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid $key-color;
+  transform: translateZ(0);
+  animation: loader 1.1s infinite linear;
+  &:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
   }
 }
 .m-icon-01 {
