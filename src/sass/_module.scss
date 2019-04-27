@@ -570,7 +570,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 3;
   }
   &-inner-01 {
     opacity: 0;
@@ -582,7 +582,7 @@
     height: 100%;
     z-index: 4;
     &.fadeIn {
-      animation: logoFadeIn .5s ease 0s 1 both;
+      animation: logoFadeIn 1s ease 0s 1 both;
     }
   }
   &-inner-02 {
@@ -611,9 +611,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 1;
     &.fadeIn {
-      animation: fadeIn .5s ease 1s 1 both;
+      animation: fadeIn 1s ease 0s 1 both;
     }
   }
   &-img-02 {
@@ -627,9 +627,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 2;
     &.fadeIn {
-      animation: fadeIn .5s ease 1.15s 1 both;
+      animation: fadeIn 1s ease 0s 1 both;
     }
   }
 }

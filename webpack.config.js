@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const Autoprefixer = require('autoprefixer');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -92,7 +91,6 @@ module.exports = [
     },
     optimization: {
       minimizer: [
-        new OptimizeCSSAssetsPlugin(),
         new UglifyJsPlugin(),
       ],
     },
@@ -110,6 +108,10 @@ module.exports = [
         {
           from: path.resolve(__dirname, 'src/img/'),
           to: path.resolve(__dirname, 'dist/img/'),
+        },
+        {
+          from: path.resolve(__dirname, 'src/pdf/'),
+          to: path.resolve(__dirname, 'dist/pdf/'),
         },
       ]),
       new MiniCssExtractPlugin({

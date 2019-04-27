@@ -9,9 +9,12 @@ export default function googleMap() {
   };
   const map = new google.maps.Map(document.getElementById('googleMap'), myOptions);
   /*アイコン設定*/
-  const icon = new google.maps.MarkerImage('./img/icon/map.png',
-    new google.maps.Size(131,75),/*アイコンサイズ設定*/
-    new google.maps.Point(0,0)/*アイコン位置設定*/
+  const icon = new google.maps.MarkerImage(
+    './img/icon/map.png',
+    null,	//size
+    null, //origin
+    new google.maps.Point(100, 10), //anchor
+    new google.maps.Size(116, 75)
   );
   const markerOptions = {
     position: latlng,

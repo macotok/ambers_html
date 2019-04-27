@@ -13,6 +13,7 @@ export default class Opening {
     this.$body = $('body');
     this.fadeIn = 'fadeIn';
     this.fadeOut = 'fadeOut';
+    this.hide = 'is-hide';
   }
   event() {
     this.$body.addClass('noScroll');
@@ -20,27 +21,34 @@ export default class Opening {
 
     setTimeout(() => {
       this.$targetElement.find(this.$openingLogo).addClass(this.fadeIn);
-    }, 1000);
+    }, 500);
 
     setTimeout(() => {
       this.$targetElement.find(this.$openingElement01).addClass('active');
-    }, 1500);
+    }, 1200);
 
     setTimeout(() => {
       this.$targetElement.find(this.$openingImage01).addClass(this.fadeIn);
+    }, 2000);
+
+    setTimeout(() => {
+      this.$targetElement.find(this.$openingImage01).addClass(this.fadeOut);
+    }, 4000);
+
+    setTimeout(() => {
       this.$targetElement.find(this.$openingImage02).addClass(this.fadeIn);
-    }, 1600);
+    }, 4100);
 
     setTimeout(() => {
       this.$slick.css('max-height', $(window).outerHeight());
       this.$targetElement.addClass('fadeOut');
       $('body,html').animate({ scrollTop: 0 }, 0);
-    }, 4000);
+    }, 6000);
 
     setTimeout(() => {
-      this.$targetElement.remove();
+      // this.$targetElement.remove();
       this.$slick.slick('slickPlay');
       this.$body.removeClass('noScroll');
-    }, 5000);
+    }, 7000);
   }
 }
