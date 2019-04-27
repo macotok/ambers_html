@@ -350,6 +350,7 @@
     width: 100%;
   }
   &-link {
+    display: block;
     @include imgHoverAnimation()
   }
 }
@@ -373,6 +374,7 @@
     width: 100%;
   }
   &-link {
+    display: block;
     @include imgHoverAnimation()
   }
 }
