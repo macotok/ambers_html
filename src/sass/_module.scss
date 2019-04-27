@@ -693,6 +693,31 @@
     font-size: .8rem;
   }
 }
+.m-pagetop-01 {
+  display: flex;
+  justify-content: flex-end;
+  &-icon {
+    background-color: #727787;
+    position: relative;
+    display: flex;
+    padding: 17px 15px 12px 15px;
+    justify-content: center;
+    align-items: center;
+    transition: all linear .3s;
+    &:after {
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid $white-color-01;
+      border-right: 2px solid $white-color-01;
+      transform: rotate(-45deg);
+      content: "";
+    }
+    &:hover {
+      background-color: #A6ABBD;
+      cursor: pointer;
+    }
+  }
+}
 #googleMap {
   width: 100%;
   height: 450px;

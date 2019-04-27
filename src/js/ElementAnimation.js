@@ -19,20 +19,21 @@ export default class ElementAnimation {
     this.resizeWindow();
   }
   eventScroll() {
-    window.addEventListener('scroll', () => {
-      const scrollTopPosition = $(window).scrollTop();
-      this.checkIsAnimation(scrollTopPosition);
-      this.headerAnimation(scrollTopPosition);
-    }, false);
+    window.addEventListener('scroll', () => { this.scrollFunc() }, false);
   };
+  scrollFunc() {
+    const scrollTopPosition = $(window).scrollTop();
+    this.checkIsAnimation(scrollTopPosition);
+    this.headerAnimation(scrollTopPosition);
+  }
   checkIsAnimation(scrollTopPosition) {
     this.targetBlockPosition.filter((t, index) => {
       if (t <= scrollTopPosition + this.controlPosition) {
         this.$targetBlock.eq(index).addClass('active');
         this.eventAnimation(this.$targetBlock.eq(index));
       }
-      return false;
     });
+    return false;
   }
   eventAnimation(targetBlock) {
     const len = targetBlock.find(this.$targetElement).length;

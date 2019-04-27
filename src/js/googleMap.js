@@ -1,5 +1,5 @@
 export default function googleMap() {
-  const latlng = new google.maps.LatLng(35.673946, 139.665906);
+  const latlng = new google.maps.LatLng(35.675616, 139.672300);
   const myOptions = {
     zoom: 18,/*拡大比率*/
     center: latlng,/*表示枠内の中心点*/
@@ -11,10 +11,10 @@ export default function googleMap() {
   /*アイコン設定*/
   const icon = new google.maps.MarkerImage(
     './img/icon/map.png',
-    null,	//size
-    null, //origin
-    new google.maps.Point(100, 10), //anchor
-    new google.maps.Size(116, 75)
+    null,
+    new google.maps.Point(0, 0),
+    null,
+    new google.maps.Size(87, 56.25)
   );
   const markerOptions = {
     position: latlng,

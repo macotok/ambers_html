@@ -13,7 +13,6 @@ export default class Opening {
     this.$body = $('body');
     this.fadeIn = 'fadeIn';
     this.fadeOut = 'fadeOut';
-    this.hide = 'is-hide';
   }
   event() {
     this.$body.addClass('noScroll');
@@ -46,7 +45,7 @@ export default class Opening {
     }, 6000);
 
     setTimeout(() => {
-      // this.$targetElement.remove();
+      this.$targetElement.remove();
       this.$slick.slick('slickPlay');
       this.$body.removeClass('noScroll');
     }, 7000);
