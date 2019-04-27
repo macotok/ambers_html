@@ -530,8 +530,12 @@
     font-size: 1rem;
     margin: 0 auto;
     background-color: $white-color-01;
+    transition: all ease .5s;
     &:hover {
       cursor: pointer;
+      background-color: $key-color;
+      color: $white-color-01;
+      border: 1px solid $white-color-01;
     }
   }
 }

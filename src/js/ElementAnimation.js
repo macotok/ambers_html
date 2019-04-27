@@ -3,7 +3,7 @@ import $ from 'jquery';
 export default class ElementAnimation {
   constructor() {
     this.$targetElement = $('.fn-animation');
-    this.$targetBlock = $('.fn-animation-block');
+    this.$targetBlocks = $('.fn-animation-block');
     this.$targetHeader = $('.fn-header');
     this.$arrowIcon = $('.fn-arrowIcon');
     this.targetBlockPosition = [];
@@ -11,30 +11,45 @@ export default class ElementAnimation {
     this.controlPosition = 800;
     this.delaySpeed = 200;
   }
+
+  /**
+   * .fn-animation-blockを定義したブロックの位置を取得
+   * ブラウザをリサイズしたときは再度取得
+   */
   getPositionToBlock() {
-    for (let i = 0; i < this.$targetBlock.length; i += 1) {
-      this.targetBlockPosition.push(this.$targetBlock.eq(i).offset().top);
+    for (let i = 0; i < this.$targetBlocks.length; i += 1) {
+      this.targetBlockPosition.push(this.$targetBlocks.eq(i).offset().top);
     }
     this.eventScroll();
     this.resizeWindow();
   }
   eventScroll() {
-    window.addEventListener('scroll', () => { this.scrollFunc() }, false);
+    window.addEventListener('scroll', () => { this.scrollFunc() });
   };
   scrollFunc() {
     const scrollTopPosition = $(window).scrollTop();
     this.checkIsAnimation(scrollTopPosition);
     this.headerAnimation(scrollTopPosition);
   }
+
+  /**
+   *　各.fn-animation-blockのブロックの位置とスクロール値を比較して、
+   * スクロール値が通過したらアニメーション処理を行なう
+   */
   checkIsAnimation(scrollTopPosition) {
     this.targetBlockPosition.filter((t, index) => {
       if (t <= scrollTopPosition + this.controlPosition) {
-        this.$targetBlock.eq(index).addClass('active');
-        this.eventAnimation(this.$targetBlock.eq(index));
+        this.$targetBlocks.eq(index).addClass('active');
+        this.eventAnimation(this.$targetBlocks.eq(index));
       }
     });
     return false;
   }
+
+  /**
+   * .fn-animationを付けている要素を順々にアニメーション表示
+   * @param targetBlock　スクロール値が通過した「.fn-animation-block」
+   */
   eventAnimation(targetBlock) {
     const len = targetBlock.find(this.$targetElement).length;
     for (let i=0; i < len; i += 1) {
@@ -43,6 +58,11 @@ export default class ElementAnimation {
       });
     }
   }
+
+  /**
+   * ページをスクロールした瞬間にヘッダーメニューを表示させる
+   * @param scrollTopPosition
+   */
   headerAnimation(scrollTopPosition) {
     if (0 < scrollTopPosition) {
       this.$targetHeader.addClass('active');

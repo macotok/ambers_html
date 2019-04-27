@@ -20,34 +20,34 @@ export default class Opening {
 
     setTimeout(() => {
       this.$targetElement.find(this.$openingLogo).addClass(this.fadeIn);
-    }, 500);
+    }, 1000);
 
     setTimeout(() => {
       this.$targetElement.find(this.$openingElement01).addClass('active');
-    }, 1200);
+    }, 1700);
 
     setTimeout(() => {
       this.$targetElement.find(this.$openingImage01).addClass(this.fadeIn);
-    }, 2000);
+    }, 2500);
 
     setTimeout(() => {
       this.$targetElement.find(this.$openingImage01).addClass(this.fadeOut);
-    }, 4000);
+    }, 3500);
 
     setTimeout(() => {
       this.$targetElement.find(this.$openingImage02).addClass(this.fadeIn);
-    }, 4100);
+    }, 3600);
 
     setTimeout(() => {
       this.$slick.css('max-height', $(window).outerHeight());
       this.$targetElement.addClass('fadeOut');
       $('body,html').animate({ scrollTop: 0 }, 0);
-    }, 6000);
+    }, 6500);
 
     setTimeout(() => {
       this.$targetElement.remove();
       this.$slick.slick('slickPlay');
       this.$body.removeClass('noScroll');
-    }, 7000);
+    }, 7500);
   }
 }
