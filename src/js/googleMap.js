@@ -20,7 +20,7 @@ export default function googleMap() {
     position: latlng,
     map: map,
     icon: icon,
-    title: 'アンバース株式会社'
+    title: 'スタジオ住所'
   };
   const marker = new google.maps.Marker(markerOptions);
   /*取得スタイルの貼り付け*/
@@ -31,7 +31,7 @@ export default function googleMap() {
       ]
     }
   ];
-  const styledMapOptions = { name: 'アンバース株式会社' };
+  const styledMapOptions = { name: 'スタジオ住所' };
   const sampleType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
   map.mapTypes.set('sample', sampleType);
   map.setMapTypeId('sample');
